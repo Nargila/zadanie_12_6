@@ -7,6 +7,7 @@ $(function(){
 	$('#search').click(searchCountries);
 
 	function searchCountries() {
+		countriesList.empty();
   		var countryName = $('#country-name').val();
   		if(!countryName.length) countryName = 'Poland';
   		$.ajax({
@@ -16,10 +17,7 @@ $(function(){
   		});
 	}
 	
-	function showCountriesList(resp) {
-  		countriesList.empty();
-
-	}
+	
 
 	function showCountriesList(resp) {
     	countriesList.empty();
